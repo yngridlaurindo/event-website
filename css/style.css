@@ -1,0 +1,146 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+
+body {
+    /* Fundo com degradê e textura de pontos sutis */
+    background-color: #0f172a;
+    background-image: radial-gradient(#1e293b 1px, transparent 1px);
+    background-size: 30px 30px; 
+    color: #f8fafc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    /* Efeito Glassmorphism (Vidro) */
+    background: rgba(30, 41, 59, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 3rem;
+    border-radius: 24px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 420px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 0.5rem;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+p.subtitle {
+    color: #94a3b8;
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+}
+
+/* Estilo para os inputs */
+input {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 15px;
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid #334155;
+    border-radius: 12px;
+    color: white;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #38bdf8;
+    background: rgba(15, 23, 42, 0.9);
+    box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.1);
+}
+
+/* Botão com brilho elegante */
+button {
+    width: 100%;
+    padding: 14px;
+    background: #38bdf8;
+    color: #0f172a;
+    border: none;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.4s;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #7dd3fc;
+    transform: scale(1.02);
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
+}
+
+/* Estilo para links e textos extras */
+.footer-text { margin-top: 25px; font-size: 0.85rem; color: #64748b; }
+.footer-text a { color: #38bdf8; text-decoration: none; font-weight: 600; }
+/* Animação de tremor */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    75% { transform: translateX(10px); }
+}
+
+.erro-shake {
+    animation: shake 0.4s ease-in-out;
+    border: 1px solid #f87171 !important;
+}
+/* Adicione ou substitua no seu style.css */
+:root {
+    --primary: #0056b3;
+    --secondary: #6c757d;
+    --bg-blue: #004aad; /* O azul da referência */
+}
+
+body {
+    background: var(--bg-blue);
+    background-image: radial-gradient(rgba(255,255,255,0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+    font-family: 'Inter', sans-serif;
+}
+
+.card-modelo {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    color: #333;
+}
+
+.btn-outline-primary {
+    border: 2px solid var(--primary);
+    background: transparent;
+    color: var(--primary);
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-outline-primary:hover {
+    background: var(--primary);
+    color: white;
+}
+.input-light {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 18px 0;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    background: #f8fafc;
+    color: #334155;
+}
+
+label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #475569;
+}
