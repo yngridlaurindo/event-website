@@ -13,12 +13,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $mail = new PHPMailer(true);
 
     try {
-        // Configurações do Servidor Gmail
+        
         $mail->isSMTP();
         $mail->Host       = 'smtp.gmail.com';
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'yngridlaurindo343@gmail.com'; // SEU GMAIL AQUI
-        $mail->Password   = 'vukmfcvcotqqlilg'; // A SENHA DE APP AQUI
+        $mail->Username   = 'yngridlaurindo343@gmail.com'; 
+        $mail->Password   = 'vukmfcvcotqqlilg'; 
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port       = 587;
         $mail->SMTPOptions = array(
@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->setFrom('seu-email@gmail.com', 'Sistema de Eventos Tech');
         $mail->addAddress($email_usuario);
 
-        // Conteúdo do E-mail (com HTML para ficar bonito)
+        // Conteúdo do E-mail 
         $mail->isHTML(true);
         $mail->CharSet = 'UTF-8';
         $mail->Subject = 'Recuperação de Acesso - TechEvent';
