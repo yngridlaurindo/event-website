@@ -1,7 +1,7 @@
 * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
 
 body {
-    /* Fundo com degradê e textura de pontos sutis */
+    
     background-color: #0f172a;
     background-image: radial-gradient(#1e293b 1px, transparent 1px);
     background-size: 30px 30px; 
@@ -13,7 +13,7 @@ body {
 }
 
 .container {
-    /* Efeito Glassmorphism (Vidro) */
+    
     background: rgba(30, 41, 59, 0.7);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
@@ -39,7 +39,6 @@ p.subtitle {
     font-size: 0.9rem;
 }
 
-/* Estilo para os inputs */
 input {
     width: 100%;
     padding: 14px;
@@ -57,7 +56,6 @@ input:focus {
     box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.1);
 }
 
-/* Botão com brilho elegante */
 button {
     width: 100%;
     padding: 14px;
@@ -78,10 +76,9 @@ button:hover {
     box-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
 }
 
-/* Estilo para links e textos extras */
 .footer-text { margin-top: 25px; font-size: 0.85rem; color: #64748b; }
 .footer-text a { color: #38bdf8; text-decoration: none; font-weight: 600; }
-/* Animação de tremor */
+
 @keyframes shake {
     0%, 100% { transform: translateX(0); }
     25% { transform: translateX(-10px); }
@@ -92,11 +89,11 @@ button:hover {
     animation: shake 0.4s ease-in-out;
     border: 1px solid #f87171 !important;
 }
-/* Adicione ou substitua no seu style.css */
+
 :root {
     --primary: #0056b3;
     --secondary: #6c757d;
-    --bg-blue: #004aad; /* O azul da referência */
+    --bg-blue: #004aad; 
 }
 
 body {
