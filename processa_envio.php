@@ -1,17 +1,14 @@
 <?php
 include('config.php');
 
-// Captura os dados do formulário
 $nome_aluno    = $_POST['nome_aluno'] ?? '';
 $ra_aluno      = $_POST['ra_aluno'] ?? '';
 $disciplina    = $_POST['disciplina'] ?? '';
 $codigo_evento = $_POST['codigo_evento'] ?? '';
 
-// Verifica se o arquivo foi enviado
 if (isset($_FILES['arquivo']) && $_FILES['arquivo']['error'] === 0) {
     $diretorio = "uploads/";
     
-    // Cria a pasta se ela não existir
     if (!is_dir($diretorio)) {
         mkdir($diretorio, 0777, true);
     }
@@ -24,7 +21,7 @@ if (isset($_FILES['arquivo']) && $_FILES['arquivo']['error'] === 0) {
     if (move_uploaded_file($_FILES['arquivo']['tmp_name'], $caminho_final)) {
         
         try {
-            // Lógica em PDO para combinar com seu config.php
+            
             $sql = "INSERT INTO envios (nome_aluno, ra, disciplina, codigo_evento, arquivo_path) 
                     VALUES (:nome, :ra, :disciplina, :codigo, :caminho)";
             
@@ -56,7 +53,7 @@ if (isset($_FILES['arquivo']) && $_FILES['arquivo']['error'] === 0) {
             margin: 0;
             overflow: hidden;
         }
-        /* O fundo interativo que você gostou */
+        
         .bg-glow {
             position: fixed;
             width: 100%;
@@ -90,7 +87,7 @@ if (isset($_FILES['arquivo']) && $_FILES['arquivo']['error'] === 0) {
             transition: all 0.3s;
         }
         .btn-voltar:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(168, 85, 247, 0.4); }
-    /* Isso vai empilhar os botões de forma organizada */
+    
 .btn-group {
     display: flex;
     flex-direction: column;
@@ -99,68 +96,66 @@ if (isset($_FILES['arquivo']) && $_FILES['arquivo']['error'] === 0) {
     margin-top: 25px;
 }
 
-/* Deixa o botão de Início sutil e profissional */
+
 .btn-home {
     background: transparent;
-    color: rgba(255, 255, 255, 0.5); /* Texto cinza suave */
+    color: rgba(255, 255, 255, 0.5); 
     text-decoration: none;
     font-size: 0.9rem;
     display: flex;
-    align-items: center;    /* Alinha verticalmente (casinha e texto na mesma altura) */
-    justify-content: center; /* ADICIONE ESTA LINHA: Alinha horizontalmente no centro do card */
+    align-items: center;    
+    justify-content: center; 
     transition: 0.3s;
-    width: 100%;            /* ADICIONE ESTA LINHA: Garante que o link ocupe a largura total para o centro funcionar */
+    width: 100%;            
 }
 .btn-home:hover {
-    color: #a855f7; /* Muda para o seu roxo no hover */
+    color: #a855f7; 
 }
 
-/* O SEGREDO: Diminui o ícone da casa que estava gigante */
 .btn-home i {
     font-size: 1rem !important; 
     margin-right: 8px;
     color: inherit;
 }
-/* Garante que o grupo de botões fique um sobre o outro e centralizado no card */
+
 .btn-group {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centraliza horizontalmente */
+    align-items: center; 
     justify-content: center;
     gap: 15px;
     margin-top: 25px;
     width: 100%;
 }
 
-/* Deixa o link "Início" com ícone e texto perfeitamente alinhados e centralizados */
 .btn-home {
     background: transparent;
     color: rgba(255, 255, 255, 0.5);
     text-decoration: none;
     font-size: 0.9rem;
-    display: flex;       /* Ativa o Flexbox para alinhar ícone + texto */
-    align-items: center; /* Alinha o ícone e a palavra na mesma altura */
-    justify-content: center; /* Centraliza o conjunto todo no meio do card */
+    display: flex;       
+    align-items: center; 
+    justify-content: center; 
     transition: 0.3s;
 }
-/* Atualize o .btn-home */
+
 .btn-home {
     background: transparent !important;
     color: rgba(255, 255, 255, 0.5) !important;
     text-decoration: none;
     font-size: 0.9rem;
     display: flex !important;
-    align-items: center !important;    /* Centraliza ícone e texto na mesma linha */
-    justify-content: center !important; /* Centraliza o conjunto no card */
-    gap: 8px;                         /* Espaço exato entre casinha e palavra */
+    align-items: center !important;    
+    justify-content: center !important; 
+    gap: 8px;                         
     width: 100%;
     margin-top: 15px;
 }
 
-/* Atualize o .btn-home i */
+
 .btn-home i {
     font-size: 1.1rem !important;
-    margin: 0 !important;             /* Remove qualquer margem que esteja empurrando */
+    margin: 0 !important;             
     display: inline-flex;
     align-items: center;
     line-height: 1;
@@ -185,7 +180,6 @@ if (isset($_FILES['arquivo']) && $_FILES['arquivo']['error'] === 0) {
 </body>
 </html>
 <?php
-// O seu "catch" e o restante do código PHP continuam abaixo desta tag
 
         } catch (PDOException $e) {
             echo "Erro no banco de dados: " . $e->getMessage();
